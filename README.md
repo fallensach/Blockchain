@@ -1,7 +1,7 @@
 # Blockchain
 Simulated blockchain created for a fake cryptocurrency called KFT. It is not decentralized but simulates how a blockchain works using crypto transactions.
 
-Features: 
+Features: <br>
 Generation of wallet. <br>
 Send and receive transactions anonymously. <br>
 Mine unconfirmed blocks for rewards. <br>
