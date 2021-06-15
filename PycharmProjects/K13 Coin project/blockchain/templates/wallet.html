@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="wallet_info">
+    <div class="wallet_info_row">
+        <h1>Wallet address: </h1>
+        <p>{{wallet_address}}</p>
+        <br>
+    </div>
+
+    <div class="wallet_info_row">
+        <h1>Balance: </h1>
+        <p>{{balance}} KFT</p>
+    </div>
+
+    <div class="wallet_info_row">
+        <h1>Words: </h1>
+        <p>{{words}}</p>
+        <br>
+    </div>
+
+    <div class="wallet_info_row">
+        <h1>Public key: </h1>
+        <p>{{public_key}}</p>
+        <br>
+    </div>
+
+    <div class="wallet_info_row">
+        <h1>Private key: </h1>
+        <p>{{private_key}}</p>
+    </div>
+
+    <div class="wallet_info_row">
+        <h1>Block height: </h1>
+        <p>{{block_height}}</p>
+    </div>
+</div>
+{% endblock %}

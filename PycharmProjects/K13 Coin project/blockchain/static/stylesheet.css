@@ -1,0 +1,459 @@
+body {
+	background: #303841;
+    margin: 0;
+
+}
+
+.navbar {
+    height: 8vh;
+    background-color: #2d2d2d;
+}
+
+p, a, h1{
+	color: #eeeeee;
+	font-family: "Roboto", sans-serif;
+}
+
+::placeholder {
+    font-family: "Roboto", sans-serif;
+    color: #3a4750;
+    opacity: 1;
+}
+
+.loginForm {
+    display: grid;
+    margin: 10% 30% 0 30%;
+    background-color: #3a4750;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 5px;
+    padding: 3vh;
+}
+
+input {
+    color: #303841;
+}
+
+.loginField input {
+    height: 4.5vh;
+    font-size: 3.5vh;
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    padding: 5px;
+    width: 100%;
+    transition: 0.3s ease-out;
+}
+
+.loginField input:focus {
+    outline: none;
+    transition: 0.3s ease-in;
+    border-radius: 15px;
+}
+
+.loginFieldSubmit input {
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    padding: 5px;
+    font-size: 2.5vh;
+    background-color: #eeeeee;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+}
+
+.loginFieldSubmit {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.loginFieldSubmit input:hover {
+    transition: 0.5s;
+    background-color: #f6c90e;
+}
+
+.loginFieldSubmit a {
+    transition: 0.5s;
+
+}
+
+
+.loginFieldSubmit a:hover {
+    transition: 0.5s;
+    color: black;
+}
+
+.loginField {
+    display: flex;
+}
+
+.loginFieldSubmit a, .loginFieldSubmit p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 2.5vh;
+    text-decoration: none;
+}
+
+.wallet_info {
+    display: flex;
+    flex-direction: column;
+    margin: 5vh;
+    background-color: #3a4750;
+    padding: 6vh;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+    animation: 0.7s slide-in-top;
+}
+
+.wallet_info p {
+    color: #eeeeee;
+    font-size: 2.5vh;
+    word-wrap: anywhere;
+}
+
+.wallet_info_row {
+    display: grid;
+    grid-template-columns: 26vh auto;
+}
+
+.wallet_info_row h1 {
+    display: flex;
+    font-size: 3vh;
+}
+
+.wallet_info_row p {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    animation: slide-in-bck-center 0.8s cubic-bezier(.25,.46,.45,.94) both;
+}
+
+.generate_container {
+    display: grid;
+    margin: 10vh 40vh 0 40vh;
+    justify-items: center;
+    justify-content: center;
+}
+
+.generate_container input {
+    transition: 0.5s;
+    border: none;
+    font-size: 3vh;
+    height: 100%;
+    border-radius: 5px;
+    padding: 2vh;
+    cursor: pointer;
+}
+
+.generate_container input:hover {
+    transition: 0.5s;
+    background-color: #f6c90e;
+}
+
+
+.generate_container h1 {
+    font-size: 5vh;
+}
+
+.navigation_container {
+    display: flex;
+    align-items: center;
+}
+
+.navigation_container a  {
+    transition: 0.5s;
+    color: #eeeeee;
+    font-family: "Roboto", sans-serif;
+    margin: 2vh;
+    font-size: 3vh;
+    text-decoration: none;
+}
+
+.navigation_container a:last-child  {
+    transition: 0.5s;
+    margin: 2vh;
+    width: 3vh;
+    height: 3vh;
+    background-size: cover;
+}
+
+.navigation_container a:hover {
+    transition: 0.5s;
+    color: black;
+    transform: translateY(-5px);
+}
+
+.blockchain {
+    display: flex;
+    justify-content: center;
+}
+
+.blockchain_container {
+    display: inline-flex;
+    justify-content: center;
+    margin: 5vh 50vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block {
+    font-family: "Consolas", sans-serif;
+    background: #f6c90e;
+    color: #2d2d2d;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+.transaction_container {
+    display: flex;
+    justify-content: center;
+}
+
+.transactions {
+    padding: 10px;
+}
+
+.unconfirmed_block {
+    font-family: "Consolas", sans-serif;
+    background: #ff5050;
+    color: #2d2d2d;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.confirmed_block {
+    font-family: "Consolas", sans-serif;
+    background: #63ff4b;
+    color: #2d2d2d;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.transaction_container_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.balance {
+    display: flex;
+}
+
+.balance p, .balance h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.transaction_container_2 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.transaction_container_2 form input {
+    margin: 5px;
+    width: 40vw;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 3rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes grow-width {
+  from {
+    width: auto;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-5-30 11:34:54
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation bounce-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}

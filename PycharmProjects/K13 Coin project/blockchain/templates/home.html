@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Welcome {{wallet_address}}</h1>
+    <div class="transaction_container">
+        <div class="transactions">
+            <p>Your confirmed transactions</p>
+            {% for transaction in confirmed_transactions %}
+                <div class="confirmed_block">
+                    {% for key, value in transaction.items() %}
+                        <div>
+                            {{ key }} : {{ value }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="transactions">
+            <p>Your unconfirmed transactions</p>
+            {% for transaction in unconfirmed_transactions %}
+                <div class="unconfirmed_block">
+                    {% for key, value in transaction.items() %}
+                        <div>
+                            {{ key }} : {{ value }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <form action="" method="POST">
+        {{ close_form.close() }}
+    </form>
+{% endblock %}

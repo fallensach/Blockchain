@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="blockchain">
+        <div class="blockchain_container">
+            <h1>Confirmed blocks</h1>
+            {% for block in blockchain %}
+                <div class="block">
+                    {% for key, value in block.items() %}
+                        <div class="block_info">
+                            {{ key }} : {{ value }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
