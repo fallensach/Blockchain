@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="blockchain">
+        <div class="blockchain_container">
+            <h1>Unconfirmed block pool</h1>
+            {% for block in unconfirmed_blockchain %}
+                <div class="block">
+                    {% for key, value in block.items() %}
+                        <div>
+                            {{ key }} : {{ value }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <form action="" method="POST">
+        {{ mine_form.mine() }}
+    </form>
+
+
+{% endblock %}

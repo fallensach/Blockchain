@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <form action="" method="post">
+        <div class="loginForm">
+            <div class="loginField">
+                {{ form.mnemonics(placeholder="Mnemonics") }}
+            </div>
+            <div class="loginField">
+                {{ form.wallet_height(placeholder="Wallet height") }}
+            </div>
+            <div class="loginFieldSubmit">
+                {{ form.submit() }}
+                <p>
+                    <a href="{{ url_for('create_wallet') }}">No wallet yet?</a>
+                </p>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

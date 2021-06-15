@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/loadingio/ldbutton@v1.0.1/dist/ldbtn.min.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='stylesheet.css') }}" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+    <div class="navigation_container">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('transaction') }}">Send payments</a>
+        <a href="{{ url_for('view_blockchain') }}">Blockchain</a>
+        <a href="{{ url_for('mine') }}">Mine</a>
+        <a href="{{ url_for('wallet') }}" style='background-image: url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_settings_48px-512.png");'></a>
+    </div>
+</header>
+{% block content %}
+{% endblock %}
+</body>
+</html>

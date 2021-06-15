@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="transaction_container_2">
+        <div class="balance">
+            <h1>Balance : </h1> <p> {{ balance }} KFT</p>
+        </div>
+        <form action="" method="POST">
+            {{ form.receiver_address(placeholder="Reciever's address") }}
+            {{ form.amount(placeholder="Amount of KFT") }}
+            {{ form.send(value="send") }}
+        </form>
+    </div>
+
+{% endblock %}
