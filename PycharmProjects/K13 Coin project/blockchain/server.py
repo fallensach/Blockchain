@@ -192,27 +192,7 @@ def mine():
 @app.route("/blockchain", methods=["GET", "POST"])
 def view_blockchain():
     confirmed_blockchain = blockchain.get_blockchain()
-    open_wallet_form = OpenWalletForm()
     wallet_keys = {}
-    filename = Path("session.txt")
-    if filename.exists():
-        file = open(filename, "r")
-        if not is_wallet_open():
-            return redirect(url_for("start"))
-
-        keys = file.readlines()
-        for index, key in enumerate(keys):
-            key = key.strip()
-            if index == 0:
-                wallet_keys["wallet_address"] = key
-            elif index == 1:
-                wallet_keys["public_key"] = key
-            elif index == 2:
-                wallet_keys["private_key"] = key
-        file.close()
-
-    else:
-        return render_template("open_wallet.html", form=open_wallet_form)
 
     mine = MineForm()
     if mine.is_submitted() and "mine" in request.form:
@@ -222,20 +202,7 @@ def view_blockchain():
 
 @app.route("/wallet", methods=["GET"])
 def wallet():
-    public_key = wallet["public_key"]
-    private_key = wallet["private_key"]
-    wallet_address = wallet["wallet_address"]
-    balance = blockchain.get_wallet_balance(wallet_address)
-    filename = Path("session.txt")
-    filename.touch(exist_ok=True)
-    file = open(filename, "w+")
-    file.write(wallet_address + "\n" +
-               public_key + "\n" +
-               private_key
-               )
-    file.close()
-    return render_template("wallet.html", public_key=public_key, private_key=private_key, words=words,
-                           wallet_address=wallet_address, balance=balance, block_height=block_height)
+    return render_template("wallet.html")
 
 def is_wallet_open():
     filename = Path("session.txt")
