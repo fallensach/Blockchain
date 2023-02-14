@@ -1,6 +1,5 @@
 from pathlib import Path
 from flask import Flask, request, render_template, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
 import os
 from forms import CreateWalletForm, OpenWalletForm, SendTransactionForm, MineForm, CloseWallet
 from blockchain import Blockchain
@@ -11,18 +10,6 @@ app.static_folder = "static"
 app.config["SECRET_KEY"] = "krypto"
 blockchain = Blockchain()
 
-if 'NAMESPACE' in os.environ and os.environ['NAMESPACE'] == 'heroku':
-    db_uri = os.environ['DATABASE_URL']
-    debug_flag = False
-
-# when running locally: use sqlite
-else:
-    db_path = os.path.join(os.path.dirname(__file__), 'test.db')
-    db_uri = 'sqlite:///{}'.format(db_path)
-    debug_flag = True
-
-
-db = SQLAlchemy(app)
 app.debug = True
 
 @app.route("/", methods=["GET", "POST"])
